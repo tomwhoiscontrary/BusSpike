@@ -6,7 +6,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath (group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: springBootVersion)
 	}
 }
 
@@ -21,19 +21,19 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	maven { url "http://repo.spring.io/milestone" }
+	maven { url 'http://repo.spring.io/milestone' }
 	mavenCentral()
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-	compile("org.springframework.boot:spring-boot-starter-actuator")
-	compile("org.springframework.cloud:spring-cloud-starter-bus-amqp:1.0.0.RC1")
+	compile (group: 'org.springframework.boot', name: 'spring-boot-starter-web')
+	compile (group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf')
+	compile (group: 'org.springframework.boot', name: 'spring-boot-starter-actuator')
+	compile (group: 'org.springframework.cloud', name: 'spring-cloud-starter-bus-amqp', version: '1.0.0.RC1')
 	
-	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	providedRuntime (group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat')
 	
-	testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile (group: 'org.springframework.boot', name: 'spring-boot-starter-test')
 }
 
 eclipse {
