@@ -1,0 +1,6 @@
+There's no time to explain.
+
+To incite a dump of an interesting number:
+
+[source,shell]
+curl -XPOST 'http://localhost:8080/bus/jmx/dump?objectName=java.lang%3Atype%3DOperatingSystem&attribute=SystemLoadAverage'
