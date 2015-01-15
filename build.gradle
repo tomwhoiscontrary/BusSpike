@@ -43,3 +43,9 @@ eclipse {
 		defaultOutputDir = file('.eclipse')
 	}
 }
+
+task cfPush(type: Exec) {
+	executable 'cf'
+	args 'push', '-p', configurations.archives.allArtifacts.files.singleFile
+}
+cfPush.dependsOn assemble
